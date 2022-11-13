@@ -18,10 +18,10 @@ and the available worker threads will be responsible for the file transfer.
 Each request is first placed in a queue which is shared for all the worker threads.
 The files will be read and sent to the client per block (the size of which will be given via command line).
 
-##Compilation:  
+## Compilation:  
 &nbsp; type make all
 
-##To run the server:   
+## To run the server:   
 &nbsp; ./dataServer -p <port> -s <thread_pool_size> -q <queue_size> -b <block_size>  
  
  port: The port on which the server will listen for external connections.  
@@ -29,7 +29,7 @@ The files will be read and sent to the client per block (the size of which will 
  queue size: The number of positions in the execution queue.  
  block size: The size of the file blocks in bytes that the worker threads will send.  
  
-##To run the client:  
+## To run the client:  
 &nbsp; ./remoteClient -i <server_ip> -p <server_port> -d <directory>  
 
  server ip: The IP address used by the server.  
